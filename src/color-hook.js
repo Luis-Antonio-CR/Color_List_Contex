@@ -3,7 +3,7 @@ import colorData from './color-data.json';
 import { v4 } from "uuid";
 
 const ColorContex = createContext();
-export const useColor = () => useContext(ColorContex);
+export const useColors = () => useContext(ColorContex);
 
 const ColorProvider = ({children}) =>{
     const [colors, setColors] = useState(colorData);
