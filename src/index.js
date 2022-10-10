@@ -1,13 +1,11 @@
-import React, { createContext, useState } from 'react';
-import color from './color-data.json'
+import React from 'react';
+import ColorProvider from './color-hook';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-export const ColorContex = createContext();
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ColorContex.Provider value={color}>
+  <ColorProvider>
     <App />
-  </ColorContex.Provider>
+  </ColorProvider>
 );
