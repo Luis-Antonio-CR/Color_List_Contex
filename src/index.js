@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import color from './color-data.json'
 import ReactDOM from 'react-dom/client';
 import App from './App';

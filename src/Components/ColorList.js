@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ColorContex } from "./";
 import Color from "./Color";
 
-const ColorList = ({colors = [], onRemoveColor = f => f, onRateColor = f => f}) => {
+const ColorList = () => {
+    const { colors } = useContext(ColorContex);
     if(!colors.length){return <h2>Not colors in the list</h2>}
     return (
         <>
             {colors.map(color => {
-                return <Color key={color.id} {...color} onRemove= {onRemoveColor} onRate={onRateColor} />
+                return <Color key={color.id} {...color} />
             })}
         </>
     )
